@@ -1,0 +1,35 @@
+.Nav-container {
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.45);
+}
+
+.Nav-title,
+.Nav-links {
+  padding: 0.5em 0;
+}
+
+.Nav-title {
+  text-align: center;
+}
+
+.Nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 40rem) {
+  .Nav-links {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.Nav-links > * {
+  list-style-type: none;
+}
+
+li :nth-child(1) {
+  text-decoration: none;
+}

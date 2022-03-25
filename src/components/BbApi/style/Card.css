@@ -1,0 +1,17 @@
+.Card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black;
+}
+
+.Card-image {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.Card-button {
+  background-color: white;
+  border: none;
+}

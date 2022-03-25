@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// rfce
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// Components
+import BbApi from "./components/BbApi";
+import BeersApi from "./components/BeersApi";
+import DinosaurApi from "./components/DinosaurApi";
+import Navigation from "./components/Navigation/Navigation";
+import Profile from "./components/BbApi/Profile";
+// Style
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App-container">
+      <BrowserRouter>
+        <nav className="Nav-container">
+          <Navigation />
+        </nav>
+        <Routes>
+          <Route path="/bbapi" element={<BbApi />} />
+          <Route path="/beersapi" element={<BeersApi />} />
+          <Route path="/dinosaurapi" element={<DinosaurApi />} />
+          <Route path="/bbapi/profile/:username" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
